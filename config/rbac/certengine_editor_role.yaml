@@ -1,0 +1,24 @@
+# permissions for end users to edit certengines.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: certengine-editor-role
+rules:
+- apiGroups:
+  - certengine.certengine.kubebuilder.domain
+  resources:
+  - certengines
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - certengine.certengine.kubebuilder.domain
+  resources:
+  - certengines/status
+  verbs:
+  - get

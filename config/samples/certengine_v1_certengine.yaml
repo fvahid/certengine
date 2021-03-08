@@ -1,0 +1,12 @@
+apiVersion: certengine.certengine.kubebuilder.domain/v1
+kind: CertEngine
+metadata:
+  name: router
+  namespace: test-acme
+spec:
+  domainName: "devops-acme.test.ir"
+  acmeStoragePath: "/tmp/storage.json"
+  acmeDNSAddress: "https://auth.acme-dns.io"
+  acmeAccountEmail: "vahidfardi@gmail.com"
+  renewSchedule: "*/60 * * * *"
+  acmeTest: true

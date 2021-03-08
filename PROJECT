@@ -1,0 +1,7 @@
+domain: certengine.kubebuilder.domain
+repo: certengine.kubebuilder.domain
+resources:
+- group: certengine
+  kind: CertEngine
+  version: v1
+version: "2"
